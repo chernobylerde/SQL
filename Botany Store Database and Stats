@@ -1,0 +1,29 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGRR PRIMARY KEY, item TEXT, price INTEGER, best_selling INTEGER, in_stock INTEGER);
+
+INSERT INTO store VALUES (1, "Rosemary", 5.99, 5, 2);
+INSERT INTO store VALUES (2, "Basil", 4.99, 12, 5);
+INSERT INTO store VALUES (3, "Mint", 3.99, 15, 6);
+INSERT INTO store VALUES (4, "Sweet Mint", 3.99, 9, 4);
+INSERT INTO store VALUES (5, "Lavender", 5.99, 1, 1);
+INSERT INTO store VALUES (6, "Chamomile", 6.99, 13, 5);
+INSERT INTO store VALUES (7, "Thyme", 5.99, 10, 5);
+INSERT INTO store VALUES (8, "Oregano", 5.99, 7, 3);
+INSERT INTO store VALUES (9, "Garlic", 7.99, 2, 1);
+INSERT INTO store VALUES (10, "Terragon", 4.99, 14, 6);
+INSERT INTO store VALUES (11, "Cayyenne", 5.99, 6, 2);
+INSERT INTO store VALUES (12, "Sweet Basil", 4.99, 8, 4);
+INSERT INTO store VALUES (13, "Chocolate Mint", 4.99, 4, 1);
+INSERT INTO store VALUES (14, "Onion", 7.99, 3, 1);
+INSERT INTO store VALUES (15, "Parsley", 5.99, 11, 5);
+
+--display the database ordered by price.
+SELECT * FROM store
+ORDER BY price desc;
+
+--what are the 5 most popular items?
+SELECT item, price, best_selling
+FROM store
+ORDER BY best_selling
+limit 5;
